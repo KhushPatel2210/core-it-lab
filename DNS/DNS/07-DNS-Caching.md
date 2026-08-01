@@ -460,3 +460,35 @@ sudo systemd-resolve --flush-caches
 ```
 
 Some Linux systems don't run a local DNS cache at all, while others use services like **systemd-resolved**, **dnsmasq**, or **nscd**.
+
+
+
+# 📝 Notes (Not Added to the Main Notes)
+
+## 1. TTL (Time To Live)
+
+> **Note:** TTL (Time To Live) is introduced here only to explain how long DNS responses stay in cache. We'll cover TTL in more depth later, including how different DNS records use TTL, how recursive resolvers honor it, and why choosing the right TTL is important for performance and DNS migrations.
+
+---
+
+## 2. DNS Propagation
+
+> **Note:** DNS propagation is introduced here because it is closely related to caching. In practice, what people call "DNS propagation" is usually cache expiration and refresh rather than DNS records being physically copied across the internet. We'll revisit this concept again when discussing DNS troubleshooting and production migrations.
+
+---
+
+## 3. Browser Cache vs OS Cache vs Recursive Resolver Cache
+
+> **Note:** This chapter introduces the three main DNS cache layers at a high level. Later, when we learn DNS troubleshooting and tools like `ipconfig`, `resolvectl`, `dig`, and `nslookup`, you'll see how to inspect, clear, and verify each cache independently.
+
+---
+
+## 4. Cache Flushing Commands
+
+> **Note:** The cache flush commands shown here are only examples. We'll cover platform-specific DNS troubleshooting, cache inspection, and cache clearing in a dedicated DNS troubleshooting module.
+
+---
+
+## 5. Recursive Resolver
+
+> **Note:** This chapter assumes you already understand what a Recursive Resolver is. If not, review the previous module, **Recursive Resolver vs Authoritative Name Server**, before continuing.
